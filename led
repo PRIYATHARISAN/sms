@@ -1,0 +1,26 @@
+include <reg51.h>
+//void delay_ms(int n);  
+sbit LED1 =P0^0;              //setbit port0.0 for led1
+sbit LED2 =P0^1;  
+sbit SW1  =P2^0;               //setbit port2.0 for sw1
+sbit SW2  =P2^1;               
+
+void main()
+{
+ while(1)                   //infinite embedded loop
+ {
+if(SW1==1)                
+{
+LED1=1;
+}
+else
+{
+    LED1=0;
+}
+if(SW2==1){
+    LED2=1;}
+else
+{
+LED2=0;
+}
+}}
